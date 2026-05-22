@@ -1,17 +1,15 @@
-# ace_app
+# DRAFTED BY KINGS
 
-A new Flutter project.
+Official DRAFTED BY KINGS mobile application.
 
-## Getting Started
+## Identity
+DRAFTED BY KINGS is the app name and primary interface module.
+ACE is the internal system/engine layer behind the app.
 
-This project is a starting point for a Flutter application.
+## Stack
+- Flutter mobile app
+- Android build pipeline
+- GitHub Actions workflow for build automation
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Status
+This repository contains the active DRAFTED BY KINGS application source.
