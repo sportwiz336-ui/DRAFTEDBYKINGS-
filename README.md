@@ -1,15 +1,38 @@
-# DRAFTED BY KINGS
+# name: Flutter Android Build
 
-Official DRAFTED BY KINGS mobile application.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-## Identity
-DRAFTED BY KINGS is the app name and primary interface module.
-ACE is the internal system/engine layer behind the app.
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
 
-## Stack
-- Flutter mobile app
-- Android build pipeline
-- GitHub Actions workflow for build automation
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-## Status
-This repository contains the active DRAFTED BY KINGS application source.
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Build debug APK
+        run: flutter build apk --debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: drafted-by-kings-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
