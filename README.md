@@ -1,6 +1,6 @@
 name: Flutter Android Build
 
-on:
+'on':
   push:
     branches:
       - main
