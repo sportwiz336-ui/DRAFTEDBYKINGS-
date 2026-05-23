@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">DRAFTED BY KINGS</string>
-    <string name="title_activity_main">DRAFTED BY KINGS</string>
-    <string name="package_name">com.draftedbykings.app</string>
-    <string name="custom_url_scheme">com.draftedbykings.app</string>
-</resources>
