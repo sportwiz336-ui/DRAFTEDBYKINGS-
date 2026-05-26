@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import sys
+import subprocess
+
+if len(sys.argv) < 2:
+    print("Usage: travos <command>")
+    sys.exit(1)
+
+cmd = sys.argv[1]
+
+if cmd == "boot":
+    subprocess.run(["python3", "boot.py"])
+
+elif cmd == "status":
+    subprocess.run(["python3", "boot.py", "--status"])
+
+elif cmd == "route":
+    # pass all args to router module
+    subprocess.run(["python3", "modules/router/route.py"] + sys.argv[2:])
+
+elif cmd == "zip":
+    subprocess.run(["python3", "lincode_vm/zip_handler/zip_handler.py"] + sys.argv[2:])
+
+elif cmd == "game":
+    subprocess.run(["python3", "games/engine_launcher.py"] + sys.argv[2:])
+
+elif cmd == "metrics":
+    subprocess.run(["python3", "lincode_vm/telemetry/telemetry_engine.py"])
+
+elif cmd == "logstream":
+    subprocess.run(["python3", "lincode_vm/logstream/logstream_engine.py"])
+
+else:
+    print(f"Unknown command: {cmd}")
