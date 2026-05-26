@@ -1,0 +1,1 @@
+TITLES=['Arena','Replica','Warriors']
